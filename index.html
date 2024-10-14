@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper" > <h2>cm into inches</h2>
+    <div class="inputdiv">
+        <input type="text" id="length" placeholder="enter in cm">
+    </div>
+<div>
+
+
+<button type="submit" onclick="convert()">  Convert cm into inches</button>
+</div>
+<div id="result">
+
+</div>
+    </div>
+    <script>
+        function convert(){
+
+        const cmval= Number(document.getElementById("length").value)
+        const inchVal= cmval/2.54
+        const result=document.getElementById("result")
+        result.innerHTML =inchVal.toFixed(4)+" inches"
+        }
+        
+       /*function convert(){
+
+        let celval= Number(document.getElementById("length").value)
+        let farenVal= celval*(9/5)+32
+        let  result=document.getElementById("result")
+        result.innerHTML =farenval.toFixed(2)+"F"
+        } 
+        */
+    </script>
+</body>
+</html>
